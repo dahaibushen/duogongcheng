@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     OTSCustomObject *obj = [OTSCustomObject new];
-    NSLog(@"look here 111---:%@",obj);
+    [obj requestWithType:@"post" withDict:nil withCompletentBlock:^(id responseObject, NSError *error) {
+        
+    }];
 }
 
 

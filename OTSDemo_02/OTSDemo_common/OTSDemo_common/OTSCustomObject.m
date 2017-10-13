@@ -10,15 +10,29 @@
 #import <AFNetworking.h>
 
 @implementation OTSCustomObject
--(void)requestdata{
+
++(instancetype)shareDefault{
+    static dispatch_once_t onceToken;
+    static OTSCustomObject *obj;
+    dispatch_once(&onceToken, ^{
+        if(!obj){
+            obj = [[OTSCustomObject alloc] init];
+        }
+    });
+    return obj;
+}
+
+
+
+-(void)requestWithType:(NSString*)type withDict:(NSDictionary*)dict withCompletentBlock:(completentBlock)block{
     
    AFHTTPSessionManager *manager = [AFHTTPSessionManager new];
-    [manager POST:nil parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager POST:type parameters:dict progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        block(responseObject,nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        block(nil,error);
     }];
 }
 @end

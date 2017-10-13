@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void(^completentBlock)(id responseObject,NSError*error);
 @interface OTSCustomObject : NSObject
--(void)requestdata;
+
++(instancetype)shareDefault;
+
+-(void)requestWithType:(NSString*)type withDict:(NSDictionary*)dict withCompletentBlock:(completentBlock)block;
 @end
