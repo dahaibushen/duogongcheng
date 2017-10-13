@@ -9,16 +9,17 @@
 #import "OTSCustomObject.h"
 #import <AFNetworking.h>
 
+
 @implementation OTSCustomObject
 -(void)requestdata{
     
    AFHTTPSessionManager *manager = [AFHTTPSessionManager new];
     [manager POST:nil parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+
     }];
 }
 @end

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '93F8B9857C63ECC26C35D9BE881336FB'
-               BlueprintName = 'Pods-OTSDemo_one'
+               BlueprintIdentifier = '557A86E737A304A118217908D6A00471'
+               BlueprintName = 'PureLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-OTSDemo_one.a'>
+               BuildableName = 'libPureLayout.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
