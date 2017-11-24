@@ -16,6 +16,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    
     [super viewDidLoad];
     OTSCustomObject *obj = [OTSCustomObject new];
     [obj requestWithType:@"post" withDict:nil withCompletentBlock:^(id responseObject, NSError *error) {
