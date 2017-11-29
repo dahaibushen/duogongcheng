@@ -16,13 +16,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    
-    
     [super viewDidLoad];
     OTSCustomObject *obj = [OTSCustomObject new];
     [obj requestWithType:@"post" withDict:nil withCompletentBlock:^(id responseObject, NSError *error) {
         
     }];
+    NSLog(@"增加测试代码，这里使用");
 }
 
 
